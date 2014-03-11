@@ -1,0 +1,85 @@
+import java.util.ArrayList;
+class arrayLists {
+	public static void main(String[] args) {
+	
+
+	ArrayList<int> ints = new ArrayList<int>();
+		ints.add(1);
+		ints.add(5);
+		ints.add(2);
+		ints.add(10);
+		if (inList(ints,2)) {
+			System.out.println("True");
+		}else {
+			System.out.println("false");
+		}
+
+	}
+		
+		public void println(ArrayList<int> a) {
+		for (int i: a ) {
+			System.out.println(i);
+			}
+			System.out.println();
+		}
+		public boolean isSorted(ArrayList<int> a, int n){
+			for(int i : a) ) {
+				if(i==n){
+					return true;
+				}
+			}
+			return false;
+		}
+		public static ArrayList<Integer> reversed(ArrayList<Integer> a) {
+			ArrayList<Integer> reverse = new ArrayList<Integer>();
+			for (int i=a.size()-1;i>=0 ;i-- ) {
+				reversed,add(a.get(i));
+			}
+		return reversed;
+		}
+		public static ArrayList<Integer> insertionsort(ArrayList<Integer> a){
+			int temp = 0;
+			for (int i =2;i <a.size(0) ;i++ ) {
+				for (k=1; K>1&& a.get(k) < a.get(k-1) ;k-- ) {
+					temp =a.get(k);
+					a.set(k, a.get(k-1));
+					a.set(k-1,temp);
+				}
+			}
+		}
+		
+	public static ArrayList<Integer> selectionsort(ArrayList<Integer> a){
+		int temp =0;
+		for (int i =0; i< a.size() ; i++) {
+			int k = i;
+			for (int j = i+1; j<a.size() ; j++) {
+				if (a.get(j) < a.get(k) || k=j) {
+				k=j;	
+				}
+			}
+			temp =a.get(k);
+				a.set(k, a.get(i));
+				a.set(i,temp);
+		}
+		return a;
+	}
+	public static ArrayList<Integer> bubblesort(ArrayList<Integer> a){
+		int temp =0;
+		for ( int i=0;i < a.size(); i++ ) {
+			boolean swapped = false;
+			for (int j = a.size() -1; j > i;j-- ) {
+				if (a.get(j) < a.get(j-1)) {
+				temp =a.get(k);
+				a.set(k, a.get(i));
+				a.set(i,temp);
+				boolean swapped = true;
+				}
+			}
+			if(!swapped) {
+				break;
+			}
+		}
+		return a;
+	}
+
+}	
